@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2022 at 08:43 PM
+-- Generation Time: Oct 22, 2022 at 08:17 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -71,6 +71,21 @@ CREATE TABLE `password_resets` (
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('bdcargo.system02@gmail.com', 'lnktFDx9j7hwgRvEAcY1v4oQ0ooeVUVuXTjcPNt0cv10a1v6jB9bcH7a447x', '2022-10-22 01:09:43'),
+('bdcargo.system02@gmail.com', 'y79Y8OcPXtjqMfSgBBs4HCnxkmmFTbR4GEdffaZbC1fT2CVHM8ag4i3lEKYX', '2022-10-22 01:11:25'),
+('bdcargo.system02@gmail.com', 'vWq4N3V7hDdFEVkdVxQKOUkExXwaKteN6YyUmsIUs0W70PiM534NJgXUWKyW', '2022-10-22 01:11:51'),
+('bdcargo.system02@gmail.com', 'HJuhjyAqkzTxFYNyPEfP67K4b1Wd5XyksqU8kmoaF6oe8YV6sbZiKGyIzqsv', '2022-10-22 01:12:35'),
+('iftakharul28@gmail.com', 'kkgjQzl3ShK6O1fHRXk7KCzWkW66NWgat6XCMzUzmit8Y1j6FRFyRfwlKlJZ', '2022-10-22 01:26:02'),
+('iftakharul28@gmail.com', 'l9CnlL9Z2IXzHOQNa8NCnMu3GHZ5RN3rcUvBRRqObQfYe7MCKlIwaw8Eobs9', '2022-10-22 01:28:02'),
+('iftakharul28@gmail.com', 'yDSLw4ICas8eMuoNKfCzCHBuImqRvScS3D2OrEvR1tuHbU49qxXzvG5y6kBW', '2022-10-22 03:21:28'),
+('iftakharul28@gmail.com', 'VVYyOM2rAZCzhSM3Te6BkHpj9Yt5pi1Lb3mTa2jjMfoam4wMFEffJuWT0kVa', '2022-10-22 03:23:29'),
+('iftakharul28@gmail.com', 'mT4q8Upa5f7tvXEFYjnmD6jSSbZEw5CZPQfpvzPXCBSxQxWS3iA6njvGRJqF', '2022-10-22 03:26:11');
+
 -- --------------------------------------------------------
 
 --
@@ -95,8 +110,7 @@ CREATE TABLE `personal_access_tokens` (
 --
 
 INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `expires_at`, `created_at`, `updated_at`) VALUES
-(8, 'App\\Models\\User', 8, 'iftakhar28@gmail.com', '10e8020a94cc60df035a79658499a6d74c20730e0098bcec50906fc31c6c8864', '[\"*\"]', NULL, NULL, '2022-10-19 12:38:14', '2022-10-19 12:38:14'),
-(9, 'App\\Models\\User', 8, 'iftakhar28@gmail.com', 'e25ddea7a321789431f8652ef3c06d65e794fab94810d57b821f1d74ca047f23', '[\"*\"]', NULL, NULL, '2022-10-19 12:41:19', '2022-10-19 12:41:19');
+(39, 'App\\Models\\User', 18, 'yeamanalam120@gmail.com', '29c52567bc4d8bf1d84f21efc3a8f26a85f937d7e3c57de9da8a799fdc7c8ad3', '[\"*\"]', NULL, NULL, '2022-10-22 11:16:16', '2022-10-22 11:16:16');
 
 -- --------------------------------------------------------
 
@@ -122,7 +136,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `number`, `email`, `email_verified_at`, `password`, `remember_token`, `tc`, `created_at`, `updated_at`) VALUES
-(8, 'Iftakharul Alam', '01911742904', 'iftakhar28@gmail.com', NULL, '$2y$10$m5108Bdw/7X9egpkmhLz4OCGMueGXO5RMzXEMSr2MwSYqQOtlkw/m', NULL, 1, '2022-10-19 12:38:14', '2022-10-19 12:38:14');
+(15, 'Iftakharul Alam', '01911742904', 'iftakharul28@gmail.com', NULL, '$2y$10$moZoWlxyNUVegYX0gpZvReifXUagp28/iXHQklXBwXth0DV2fbMMy', NULL, 1, '2022-10-22 01:47:09', '2022-10-22 01:47:09'),
+(18, 'Yeaman Alam', '01712603766', 'yeamanalam120@gmail.com', NULL, '$2y$10$PoFOc4aqwh0EdGDtnVN7PO76x.15KrDuy7Wd550c06P9HikrctCQK', NULL, 1, '2022-10-22 08:23:40', '2022-10-22 08:23:40');
 
 --
 -- Indexes for dumped tables
@@ -183,13 +198,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
